@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>bootstrap-material-design</artifactId>
-    <version>0.3.0-SNAPSHOT</version>
+    <version>0.3.0</version>
     <name>Material Design for Bootstrap</name>
     <description>WebJar for Material Design for Bootstrap</description>
     <url>http://webjars.org</url>
@@ -50,7 +50,7 @@
         <url>http://github.com/webjars/bootstrap-material-design</url>
         <connection>scm:git:https://github.com/webjars/bootstrap-material-design.git</connection>
         <developerConnection>scm:git:https://github.com/webjars/bootstrap-material-design.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>bootstrap-material-design-0.3.0</tag>
     </scm>
     
     <build>
@@ -65,13 +65,13 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="download archive"/>
-                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip"/>
-                                <echo message="unzip archive"/>
-                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}"/>
-                                <echo message="moving resources"/>
+                                <echo message="download archive" />
+                                <get src="${upstream.url}" dest="${project.build.directory}/${project.artifactId}.zip" />
+                                <echo message="unzip archive" />
+                                <unzip src="${project.build.directory}/${project.artifactId}.zip" dest="${project.build.directory}" />
+                                <echo message="moving resources" />
                                 <move todir="${destDir}">
-                                    <fileset dir="${project.build.directory}/bootstrap-material-design-${upstream.version}/dist"/>
+                                    <fileset dir="${project.build.directory}/bootstrap-material-design-${upstream.version}/dist" />
                                 </move>
                             </target>
                         </configuration>
